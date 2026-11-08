@@ -1,0 +1,32 @@
+[project]
+name = "langchain-preact"
+version = "0.1.0"
+description = "LangChain middleware for improving agent task success with tool call result prediction"
+readme = "README.md"
+authors = [
+    { name = "kyoui", email = "kyocobol@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+langchain-preact = "langchain_preact:main"
+
+[build-system]
+requires = ["uv_build>=0.12.22,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.4",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "SIM",
+    "I",
+]
